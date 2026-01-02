@@ -39,7 +39,7 @@ body.light-mode {
 
 html {
     scroll-behavior: smooth;
-    font-size: 125%;
+    font-size: 100%;
 }
 
 body {
@@ -80,7 +80,7 @@ body {
 }
 
 .nav-logo a {
-    font-size: 1.8rem;
+    font-size: 1.44rem;
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
@@ -105,7 +105,7 @@ body {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
-    font-size: 1.3rem;
+    font-size: 1.04rem;
 }
 
 .nav-link::after {
@@ -174,7 +174,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -189,7 +189,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.44rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 600;
@@ -197,7 +197,7 @@ body {
 }
 
 .hero-location {
-    font-size: 1.1rem;
+    font-size: 0.88rem;
     color: var(--light-text);
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out 0.15s backwards;
@@ -205,7 +205,7 @@ body {
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 0.88rem;
     color: var(--light-text);
     margin-bottom: 2rem;
     max-width: 600px;
@@ -323,7 +323,7 @@ section {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
@@ -358,7 +358,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 0.96rem;
     transition: var(--transition);
 }
 
@@ -414,7 +414,7 @@ section {
 .skill-category h4 {
     color: var(--primary-color);
     margin-bottom: 0.8rem;
-    font-size: 1.1rem;
+    font-size: 0.88rem;
 }
 
 .skill-tags {
@@ -428,7 +428,7 @@ section {
     color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.72rem;
     border: 1px solid rgba(0, 212, 255, 0.3);
     transition: var(--transition);
 }
@@ -585,7 +585,7 @@ section {
 }
 
 .experience-header h3 {
-    font-size: 1.4rem;
+    font-size: 1.12rem;
     color: var(--white);
     margin-bottom: 0.3rem;
 }
@@ -596,7 +596,7 @@ section {
     transition: var(--transition);
     border-bottom: 2px solid transparent;
     font-weight: 600;
-    font-size: 1.05rem;
+    font-size: 0.84rem;
 }
 
 .company-link:hover {
@@ -619,19 +619,19 @@ section {
 .date {
     color: var(--accent-color);
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.76rem;
 }
 
 .location {
     color: var(--light-text);
-    font-size: 0.9rem;
+    font-size: 0.72rem;
     margin-left: 1rem;
 }
 
 .experience-description {
     color: var(--light-text);
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .experience-list {
@@ -778,7 +778,7 @@ section {
 }
 
 .publication-header h3 {
-    font-size: 1.2rem;
+    font-size: 0.96rem;
     color: var(--white);
     flex: 1;
 }
@@ -786,7 +786,7 @@ section {
 .publication-status {
     padding: 0.4rem 0.8rem;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.64rem;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -811,7 +811,7 @@ section {
 
 .publication-description {
     color: var(--light-text);
-    font-size: 0.95rem;
+    font-size: 0.76rem;
     line-height: 1.6;
 }
 
@@ -910,7 +910,7 @@ section {
 
 .language-name {
     padding: 1.5rem 2rem;
-    font-size: 1.2rem;
+    font-size: 0.96rem;
     font-weight: 600;
     color: var(--white);
     border-right: 1px solid var(--border-color);
@@ -919,7 +919,7 @@ section {
 
 .language-proficiency {
     padding: 1.5rem 2rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--primary-color);
     font-weight: 500;
     text-align: left;
@@ -1068,7 +1068,7 @@ section {
     border: 2px solid #ffffff;
     border-radius: 50px;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: inherit;
     outline: none;
     transition: var(--transition);
@@ -1105,7 +1105,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: var(--transition);
 }
 
@@ -1116,7 +1116,7 @@ section {
 
 #pitch-status {
     margin-top: 1rem;
-    font-size: 0.9rem;
+    font-size: 0.72rem;
     color: var(--light-text);
     min-height: 1.5rem;
 }
@@ -1262,15 +1262,15 @@ section {
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 0.88rem;
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.28rem;
     }
 
     .hero {
