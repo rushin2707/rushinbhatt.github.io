@@ -40,6 +40,7 @@ body.light-mode {
 
 html {
     scroll-behavior: smooth;
+    font-size: 125%;
 }
 
 body {
@@ -75,7 +76,7 @@ body {
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -96,7 +97,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .nav-link {
@@ -105,6 +106,7 @@ body {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    font-size: 1.3rem;
 }
 
 .nav-link::after {
@@ -451,6 +453,19 @@ section {
     object-fit: contain;
 }
 
+.company-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.company-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+}
+
 .education-card h4 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
@@ -541,11 +556,18 @@ section {
     margin-bottom: 0.3rem;
 }
 
-.company {
+.company-link {
     color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
     font-weight: 600;
     font-size: 1.05rem;
-    margin-bottom: 0.5rem;
+}
+
+.company-link:hover {
+    color: var(--white);
+    border-bottom-color: var(--primary-color);
 }
 
 .company-link {
@@ -989,7 +1011,7 @@ section {
 .pitch-submit {
     position: absolute;
     right: 8px;
-    bottom: 68px;
+    bottom: 16px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
