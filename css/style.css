@@ -848,6 +848,51 @@ section {
 }
 
 /* ==========================================
+   LANGUAGES SECTION
+   ========================================== */
+.languages {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.languages-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.language-row {
+    transition: var(--transition);
+}
+
+.language-row:hover {
+    background: rgba(0, 212, 255, 0.05);
+}
+
+.language-name {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    border-right: 1px solid var(--border-color);
+    width: 50%;
+}
+
+.language-proficiency {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: left;
+    width: 50%;
+}
+
+/* ==========================================
    CONTACT SECTION
    ========================================== */
 .contact {
