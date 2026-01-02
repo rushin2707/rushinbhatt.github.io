@@ -14,6 +14,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#publications" class="nav-link">Publications</a></li>
@@ -74,7 +75,8 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title collapsed">About Me</h2>
+            <div class="section-content">
             <div class="about-content">
                 <div class="about-text">
                 <p>
@@ -183,68 +185,55 @@
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Education -->
-            <div class="education-section">
-                <h3>Education</h3>
-                <div class="education-timeline">
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h3>Master of Science in Data Science</h3>
-                            <div class="education-logo">
-                                <img src="columbia.png" alt="Columbia University" class="university-logo">
-                                <a href="https://www.columbia.edu/" target="_blank" class="university-link">Columbia University</a>
-                            </div>
-                            <span class="education-date">2025 - 2027</span>
-                            <span class="education-location">New York, NY</span>
-                        </div>
-                        <p class="education-description">
-                            Pursuing advanced studies in Data Science with focus on Machine Learning and Agentic AI.
-                        </p>
-                        <div class="education-details">
-                            <p><strong>Fall 2025:</strong> Applied Machine Learning, Algorithms for Data Science, Probability and Statistics, Exploratory Data Analysis & Visualization</p>
-                            <p><strong>Spring 2026:</strong> Statistical Inference and Modeling, Natural Language Processing, High Performance Machine Learning, Machine Learning for Data Science</p>
-                        </div>
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title collapsed">Education</h2>
+            <div class="section-content">
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="columbia.png" alt="Columbia University" class="university-logo">
                     </div>
-
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h3>Bachelor of Technology in Computer Science</h3>
-                            <div class="education-logo">
-                                <img src="pdpu.png" alt="PDEU" class="university-logo">
-                                <a href="https://pdeu.ac.in/" target="_blank" class="university-link">PDEU</a>
-                            </div>
-                            <span class="education-date">2021 - 2025</span>
-                            <span class="education-location">Gandhinagar, India</span>
-                        </div>
-                        <p class="education-description">
-                            Completed undergraduate studies with distinction, serving as Student Research Assistant.
-                        </p>
-                        <div class="education-details">
-                            <p><strong>GPA:</strong> 3.7/4.0</p>
-                            <p><strong>Relevant Coursework:</strong> Big Data Analytics, Cloud Computing, Machine Learning, Neural Networks, Data Structures & Algorithms, Database, Operating System, Computer Networks, Software Engineering</p>
-                        </div>
-                    </div>
-
-                    <div class="education-item">
-                        <div class="education-header">
-                            <h3>IGCSE, AS & A Levels</h3>
-                            <div class="education-logo">
-                                <img src="riverside.jpeg" alt="The Riverside School" class="university-logo">
-                                <a href="https://schoolriverside.com/" target="_blank" class="university-link">The Riverside School</a>
-                            </div>
-                            <span class="education-date">2009 - 2021</span>
-                            <span class="education-location">Ahmedabad, India</span>
-                        </div>
-                        <p class="education-description">
-                            Alumnus of Riverside School, Ahmedabad – a hub of experiential learning founded by Kiran Bir Sethi.
-                        </p>
-                        <div class="education-details">
-                            <p>Guided by her visionary 'Design for Change' approach, the school instilled a passion for innovation and curiosity in me. The A-level (IGCSE board) curriculum offered a global perspective, preparing me for diverse challenges.</p>
-                            <p><strong>Key Skills Developed:</strong> Communication, Teamwork, Leadership</p>
-                        </div>
-                    </div>
+                    <h4>Master of Science in Data Science</h4>
+                    <p class="education-university"><a href="https://www.columbia.edu/" target="_blank">Columbia University</a></p>
+                    <p class="education-date">2025 - 2027 | New York, NY</p>
+                    <p class="education-coursework">
+                        <strong>Fall 2025:</strong> Applied Machine Learning, Algorithms for Data Science, Probability and Statistics, Exploratory Data Analysis & Visualization
+                        <br><br>
+                        <strong>Spring 2026:</strong> Statistical Inference and Modeling, Natural Language Processing, High Performance Machine Learning, Machine Learning for Data Science
+                    </p>
                 </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="pdpu.png" alt="PDEU" class="university-logo">
+                    </div>
+                    <h4>Bachelor of Technology in Computer Science</h4>
+                    <p class="education-university"><a href="https://pdeu.ac.in/" target="_blank">PDEU</a></p>
+                    <p class="education-date">2021 - 2025 | Gandhinagar, India</p>
+                    <p class="education-gpa"><strong>GPA:</strong> 3.7/4.0 (Student Research Assistant)</p>
+                    <p class="education-coursework">
+                        <strong>Relevant Coursework:</strong> Big Data Analytics, Cloud Computing, Machine Learning, Neural Networks, Data Structures & Algorithms, Database, Operating System, Computer Networks, Software Engineering
+                    </p>
+                </div>
+                 <div class="education-card">
+                    <div class="education-icon">
+                        <img src="riverside.jpeg" alt="The Riverside School" class="university-logo">
+                    </div>
+                    <h4>IGCSE, AS & A Levels</h4>
+                    <p class="education-university"><a href="https://schoolriverside.com/" target="_blank">The Riverside School</a></p>
+                    <p class="education-date">2009 - 2021 | Ahmedabad, India</p>
+                    <p class="education-coursework">
+                        Alumnus of Riverside School, Ahmedabad – a hub of experiential learning founded by Kiran Bir Sethi. Guided by her visionary 'Design for Change' approach, the school instilled a passion for innovation and curiosity in me. The A-level (IGCSE board) curriculum offered a global perspective, preparing me for diverse challenges. Grateful for the Riverside experience, shaping my journey with a blend of academic excellence and holistic growth.
+                        <br><br>
+                        <strong>Key Skills Developed:</strong> Communication, Teamwork, Leadership
+                    </p>
+                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -252,7 +241,8 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title collapsed">Professional Experience</h2>
+            <div class="section-content">
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-header">
@@ -395,13 +385,15 @@
                     </ul>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title collapsed">Featured Projects</h2>
+            <div class="section-content">
             <div class="projects-grid">
                 <a href="https://ieeexplore.ieee.org/abstract/document/11203706" target="_blank" class="project-card">
                     <div class="project-header">
@@ -620,13 +612,15 @@
                     </div>
                 </a>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Publications Section -->
     <section id="publications" class="publications">
         <div class="container">
-            <h2 class="section-title">Publications & Research</h2>
+            <h2 class="section-title collapsed">Publications & Research</h2>
+            <div class="section-content">
             <div class="publications-list">
                 <a href="https://ieeexplore.ieee.org/abstract/document/11203706" target="_blank" class="publication-item">
                     <div class="publication-header">
@@ -685,13 +679,15 @@
                     </p>
                 </a>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Achievements Section -->
     <section id="achievements" class="achievements">
         <div class="container">
-            <h2 class="section-title">Achievements & Interests</h2>
+            <h2 class="section-title collapsed">Achievements & Interests</h2>
+            <div class="section-content">
             <div class="achievements-grid">
                 <a href="music.pdf" target="_blank" class="achievement-card">
                     <div class="achievement-icon">
@@ -747,13 +743,15 @@
                     <span class="achievement-cta">View Internships →</span>
                 </a>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Languages Section -->
     <section id="languages" class="languages">
         <div class="container">
-            <h2 class="section-title">Languages</h2>
+            <h2 class="section-title collapsed">Languages</h2>
+            <div class="section-content">
             <table class="languages-table">
                 <tbody>
                     <tr class="language-row">
@@ -778,13 +776,14 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title collapsed">Get In Touch</h2>
             <p class="contact-intro">
                 Actively exploring roles in AI & Agentic AI, Machine Learning, Deep Learning and Software Engineering, where product innovation meets creative applications. Based in New York, I would prefer opportunities in the Bay Area and would be ready to relocate to any major tech city in the US.
             </p>
@@ -823,6 +822,7 @@
                         <i class="fas fa-graduation-cap"></i> Google Scholar
                     </a>
                 </div>
+            </div>
             </div>
         </div>
     </section>

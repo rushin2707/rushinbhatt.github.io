@@ -341,4 +341,58 @@ document.addEventListener('visibilitychange', () => {
     }
 });
 
+// ==========================================
+// COLLAPSIBLE SECTIONS FUNCTIONALITY
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click event listeners to all section titles
+    const sectionTitles = document.querySelectorAll('.section-title');
+    
+    sectionTitles.forEach(title => {
+        title.addEventListener('click', function() {
+            const sectionContent = this.nextElementSibling;
+            
+            if (this.classList.contains('collapsed')) {
+                // Expand the section
+                this.classList.remove('collapsed');
+                sectionContent.classList.add('expanded');
+            } else {
+                // Collapse the section
+                this.classList.add('collapsed');
+                sectionContent.classList.remove('expanded');
+            }
+        });
+    });
+    
+    // Handle navigation link clicks to expand corresponding sections
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const sectionTitle = targetSection.querySelector('.section-title');
+                const sectionContent = targetSection.querySelector('.section-content');
+                
+                // Expand the section if it's collapsed
+                if (sectionTitle && sectionTitle.classList.contains('collapsed')) {
+                    sectionTitle.classList.remove('collapsed');
+                    if (sectionContent) {
+                        sectionContent.classList.add('expanded');
+                    }
+                }
+                
+                // Scroll to the section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
 console.log('Portfolio loaded successfully! 🚀');

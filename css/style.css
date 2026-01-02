@@ -330,6 +330,13 @@ section {
     position: relative;
     display: inline-block;
     width: 100%;
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.section-title:hover {
+    color: var(--primary-color);
 }
 
 .section-title::after {
@@ -342,6 +349,34 @@ section {
     height: 4px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-radius: 2px;
+}
+
+.section-title::before {
+    content: '▼';
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.section-title.collapsed::before {
+    content: '▶';
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.section-content.expanded {
+    max-height: 5000px; /* Large enough to accommodate content */
+    opacity: 1;
 }
 
 /* ==========================================
@@ -416,107 +451,92 @@ section {
     color: var(--white);
 }
 
-.education-timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
 
-.education-timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--primary-color), transparent);
+.education-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: var(--transition);
 }
 
-.education-item {
-    margin-bottom: 3rem;
-    padding-left: 2rem;
-    position: relative;
+.education-card:hover {
+    background: rgba(0, 212, 255, 0.08);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
 }
 
-.education-item::before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 0;
-    width: 18px;
-    height: 18px;
-    background: var(--primary-color);
-    border-radius: 50%;
-    border: 3px solid var(--darker-bg);
-}
-
-.education-header {
+.education-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.education-header h3 {
-    font-size: 1.4rem;
-    color: var(--white);
-    margin-bottom: 0.3rem;
+.university-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
-.education-logo {
+.company-logo {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
 }
 
-.university-logo {
+.company-logo-img {
     width: 40px;
     height: 40px;
     object-fit: contain;
     margin-right: 0.5rem;
 }
 
-.university-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: var(--transition);
-    border-bottom: 2px solid transparent;
-    font-weight: 600;
-    font-size: 1.05rem;
+.education-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
 }
 
-.university-link:hover {
+.education-university {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.education-university a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.education-university a:hover {
     color: var(--white);
-    border-bottom-color: var(--primary-color);
 }
 
 .education-date {
-    color: var(--accent-color);
-    font-weight: 500;
+    color: var(--light-text);
     font-size: 0.95rem;
-}
-
-.education-location {
-    color: var(--light-text);
-    font-size: 0.9rem;
-    margin-left: 1rem;
-}
-
-.education-description {
-    color: var(--light-text);
     margin-bottom: 1rem;
-    font-size: 1rem;
 }
 
-.education-details {
-    color: var(--light-text);
+.education-gpa,
+.education-coursework {
     font-size: 0.95rem;
+    color: var(--light-text);
     line-height: 1.6;
 }
 
-.education-details p {
-    margin-bottom: 0.8rem;
-}
-
-.education-details strong {
-    color: var(--white);
+.education-coursework {
+    margin-top: 1rem;
 }
 
 /* ==========================================
