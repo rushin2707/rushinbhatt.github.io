@@ -217,6 +217,57 @@ function createBackToTopButton() {
 document.addEventListener('DOMContentLoaded', createBackToTopButton);
 
 // ==========================================
+// PITCH FORM HANDLING
+// ==========================================
+const pitchForm = document.getElementById('pitch-form');
+const pitchStatus = document.getElementById('pitch-status');
+
+if (pitchForm) {
+    pitchForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(pitchForm);
+        const submitBtn = pitchForm.querySelector('.pitch-submit');
+        const originalIcon = submitBtn.innerHTML;
+        
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+        pitchStatus.textContent = 'Sending...';
+        pitchStatus.className = '';
+        
+        try {
+            const response = await fetch(pitchForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                pitchStatus.textContent = 'Sent! I\'ll get back to you soon!';
+                pitchStatus.className = 'success';
+                pitchForm.reset();
+            } else {
+                throw new Error('Failed to send');
+            }
+        } catch (error) {
+            pitchStatus.textContent = 'Something went wrong. Please try again.';
+            pitchStatus.className = 'error';
+        }
+        
+        submitBtn.innerHTML = originalIcon;
+        submitBtn.disabled = false;
+        
+        // Clear status after 5 seconds
+        setTimeout(() => {
+            pitchStatus.textContent = '';
+            pitchStatus.className = '';
+        }, 5000);
+    });
+}
+
+// ==========================================
 // CONTACT FORM VALIDATION (Optional)
 // ==========================================
 function setupFormValidation() {
