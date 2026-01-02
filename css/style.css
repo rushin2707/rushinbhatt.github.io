@@ -933,6 +933,10 @@ section {
     background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
+.contact .section-title::before {
+    display: none;
+}
+
 .contact-intro {
     text-align: center;
     font-size: 1.1rem;

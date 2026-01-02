@@ -345,13 +345,18 @@ document.addEventListener('visibilitychange', () => {
 // COLLAPSIBLE SECTIONS FUNCTIONALITY
 // ==========================================
 document.addEventListener('DOMContentLoaded', function() {
-    // Add click event listeners to all section titles
+    // Add click event listeners to all section titles except Contact
     const sectionTitles = document.querySelectorAll('.section-title');
-    
+
     sectionTitles.forEach(title => {
+        // Skip the Contact section
+        if (title.closest('section').id === 'contact') {
+            return;
+        }
+
         title.addEventListener('click', function() {
             const sectionContent = this.nextElementSibling;
-            
+
             if (this.classList.contains('collapsed')) {
                 // Expand the section
                 this.classList.remove('collapsed');
